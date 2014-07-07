@@ -1,14 +1,14 @@
 # Textformatter Accordion 1.1.1
 
-This Textformatter module for ProcessWire allows you to designate areas in a single textarea to be converted to an collapsed accordion list.
+This Textformatter module for ProcessWire allows you to designate areas in a single textarea to be converted to an collapsed accordion list. The markup pattern for this module is based on the **[TextformatterPagination](https://github.com/ryancramerdesign/TextformatterPagination)** plugin with the idea that they could be interchangeable.
 
-##### To define an accordion item
+#### To define an accordion item
 Put 5+ hyphens '-----Your Title Here' on a single line (within paragraph tags) to specify a title for the accordion item. The paragraphs below will be collapsed.
 
-##### To end an accordion group
-To end a group of accodrion items and return to regular textarea content, put exactly 5 slashes on a single line '/////' (within paragraph tags).
+#### To end an accordion
+To end a group of accordion items and return to regular textarea content, put exactly 5 slashes on a single line '/////' (within paragraph tags).
+This is only needed if you want to end collapsed content and return to regular textarea content.
 
-The markup pattern for this module is based on the **[TextformatterPagination](https://github.com/ryancramerdesign/TextformatterPagination)** plugin with the idea that they could be interchangeable.
 
 ## How to install 
 
@@ -24,7 +24,14 @@ clicking "check for new modules" from your Modules screen.
 1. In the ProcessWire admin to Setup > Fields and edit the Textarea field that you want to
 support accordions. On the "Details" tab, select "Accordion" as a Textformatter and save.
 
-2. Add the CSS/JS files to any templates that use this textformatter.  
+2. Add the CSS/JS files to any templates that use this textformatter. You can use any css you want to style the accordion list.
+What is included with this module is a barebones example to get you started.
+
+``` html
+/TextformatterAccordion.css
+/TextformatterAccordion.js
+
+```
 
 3. Edit a page that uses the field you added the "Accordion" TextFormatter to in step one.
 The textarea now supports content as usual, but can also have multiple collapsed (Accordion) areas.
