@@ -27,7 +27,7 @@ class TextformatterAccordion extends Textformatter {
 
 	protected $options = array(
 		'outerMarkup' => "<dl class='accordion'>{out}</dl>",
-		'innerMarkup' => "<dt><a href='#{url}'>{title}</a></dt><dd>{body}</dd>",
+		'innerMarkup' => "<dt><a href='#{anchor}'>{title}</a></dt><dd id='{anchor}'>{body}</dd>",
 	);
 	
 	public function format(&$str){
@@ -62,9 +62,9 @@ class TextformatterAccordion extends Textformatter {
 				$pos = strpos($v, "~~~\t");
 				$title = trim(substr($v, 0, $pos));
 				$title == '' ? $title = "Untitled Item" : ''; // no title specified
-				$url = strtolower(wire('sanitizer')->pageName($title));
+				$anchor = strtolower(wire('sanitizer')->pageName($title));
 				$accordion[$k] = substr($v, $pos+4);
-				$accordionItems .= str_replace(array('{url}', '{title}', '{body}'), array($url, trim($title), substr($v, $pos+4)), $this->options['innerMarkup']);
+				$accordionItems .= str_replace(array('{anchor}', '{title}', '{body}'), array($url, trim($title), substr($v, $pos+4)), $this->options['innerMarkup']);
 			}
 
 			$out .= $intro . str_replace('{out}', $accordionItems, $this->options['outerMarkup']);
