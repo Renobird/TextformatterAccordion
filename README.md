@@ -2,6 +2,8 @@
 
 This Textformatter module for ProcessWire allows you to designate areas in a single textarea to be converted to an collapsed accordion list. The markup pattern for this module is based on the **[TextformatterPagination](https://github.com/ryancramerdesign/TextformatterPagination)** plugin with the idea that they could be interchangeable.
 
+**[Simple Demo (Front end)](http://jsfiddle.net/hEF6z/2/)**
+
 
 ## How to install 
 
@@ -51,6 +53,3 @@ This is only needed if you want to end collapsed content and return to regular t
 > /////
 >
 > The 5 slashes above signify an end to the accordion group above. You only need to specify the end of a group if you want to return to regular textarea content. You can continue to use the same pattern to collapse content into accordions as many times as you wish.
-
-**[Simple Demo](http://jsfiddle.net/hEF6z/2/)**
-
