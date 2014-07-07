@@ -23,19 +23,11 @@ support accordions. On the "Details" tab, select "Accordion" as a Textformatter 
 The textarea now supports content as usual, but can also have multiple collapsed (Accordion) areas.
 See the examples below for how to desinate accordion items.
 
-```
------Accordion Item
 
-The paragraphs beneath each accordion item are collapsed by default and open when you click on the title specified above. You can use multiple paragraphs, and any other content allowed in the textarea. For the sake of demonstration there are several placeholder items and paragraphs below.
-
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.
-
------Another Accordion Item
-
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.
-
------A Third Accordion Item
-
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.
-
-```
+> ----- Accordion Item
+> 
+> The paragraphs beneath each accordion item are collapsed by default and open when you click on the title specified above. You can use multiple paragraphs, and any other content allowed in the textarea. 
+> 
+> ----- Another Accordion Item
+> 
+> The paragraphs beneath each accordion item are collapsed by default and open when you click on the title specified above. You can use multiple paragraphs, and any other content allowed in the textarea. 

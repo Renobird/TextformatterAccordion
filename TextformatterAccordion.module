@@ -46,7 +46,7 @@ class TextformatterAccordion extends Textformatter {
 
 			if ($start === false){
 				$out .= $val; // no accordion items in this block, just add $val to $out
-				continu
+				continue;
 			}
 
 			$intro = trim(substr($val, 0, $start));
