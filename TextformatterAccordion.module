@@ -64,7 +64,7 @@ class TextformatterAccordion extends Textformatter {
 				$title == '' ? $title = "Untitled Item" : ''; // no title specified
 				$anchor = strtolower(wire('sanitizer')->pageName($title));
 				$accordion[$k] = substr($v, $pos+4);
-				$accordionItems .= str_replace(array('{anchor}', '{title}', '{body}'), array($url, trim($title), substr($v, $pos+4)), $this->options['innerMarkup']);
+				$accordionItems .= str_replace(array('{anchor}', '{title}', '{body}'), array($anchor, trim($title), substr($v, $pos+4)), $this->options['innerMarkup']);
 			}
 
 			$out .= $intro . str_replace('{out}', $accordionItems, $this->options['outerMarkup']);
