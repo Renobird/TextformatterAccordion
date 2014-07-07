@@ -1,0 +1,76 @@
+<?php
+
+/**
+ * ProcessWire Accordion Textformatter
+ * by "Renobird" Tom Reno
+ *
+ * Convert portions of textarea content into a <dl> and collapse into an accordion.
+ *
+ * ProcessWire 2.x
+ * Copyright (C) 2010 by Ryan Cramer
+ * Licensed under GNU/GPL v2, see LICENSE.TXT
+ *
+ * http://www.processwire.com
+ * http://www.ryancramer.com
+ *
+ */
+
+class TextformatterAccordion extends Textformatter {
+
+	public static function getModuleInfo() {
+		return array(
+			'title' => 'Accordion', 
+			'version' => 1, 
+			'summary' => "Convert portions of textarea content into a <dl> and collapse into an accordion. Put 5+ hyphens '-----Your Title Here' on a single line (within paragraph tags) to create specify title the paragraphs below will be collapsed. This module is largely build using code from the TextformatterPagination plugin with the idea that they could be interchangeable.", 
+		); 
+	}
+
+	protected $options = array(
+		'outerMarkup' => "<dl class='accordion'>{out}</dl>",
+		'innerMarkup' => "<dt><a href='#{title}'>{title}</a></dt><dd>{body}</dd>",
+	);
+	
+	public function format(&$str){
+		
+		$out = '';
+
+		if(strpos($str, '<p>-----') === false) return; // quick exit
+
+		$blocks = explode("<p>/////</p>", $str);
+		if(empty($blocks[0])) array_shift($blocks);
+
+		foreach ($blocks as $key => $val){
+
+			$accordionItems = '';
+			$start = strpos($val, '<p>-----');
+
+			if ($start === false){
+				$out .= $val; // no accordion items in this block, just add $val to $out
+				continu
+			}
+
+			$intro = trim(substr($val, 0, $start));
+			$str = trim(substr($val, $start));
+
+			$separator = '~~~Panel~~~';
+			$string = preg_replace('{<p>\s*-----+\s*(.*?)</p>}i', $separator . '$1~~~' . "\t", $val); 
+		
+			$accordion = explode($separator, $string);
+			if(empty($$accordion[0])) array_shift($accordion);
+		
+			foreach($accordion as $k => $v) {
+				$pos = strpos($v, "~~~\t");
+				$title = trim(substr($v, 0, $pos));
+				$title == '' ? $title = "Untitled Item" : ''; // no title specified
+				$accordion[$k] = substr($v, $pos+4);
+				$accordionItems .= str_replace(array('{title}', '{body}'), array(trim($title), substr($v, $pos+4)), $this->options['innerMarkup']);
+			}
+
+			$out .= $intro . str_replace('{out}', $accordionItems, $this->options['outerMarkup']);
+
+		}
+
+		$str = $out;
+		
+	}
+}
