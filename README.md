@@ -2,13 +2,6 @@
 
 This Textformatter module for ProcessWire allows you to designate areas in a single textarea to be converted to an collapsed accordion list. The markup pattern for this module is based on the **[TextformatterPagination](https://github.com/ryancramerdesign/TextformatterPagination)** plugin with the idea that they could be interchangeable.
 
-#### To define an accordion item
-Put 5+ hyphens '-----Your Title Here' on a single line (within paragraph tags) to specify a title for the accordion item. The paragraphs below will be collapsed.
-
-#### To end an accordion
-To end a group of accordion items and return to regular textarea content, put exactly 5 slashes on a single line '/////' (within paragraph tags).
-This is only needed if you want to end collapsed content and return to regular textarea content.
-
 
 ## How to install 
 
@@ -24,20 +17,26 @@ clicking "check for new modules" from your Modules screen.
 1. In the ProcessWire admin to Setup > Fields and edit the Textarea field that you want to
 support accordions. On the "Details" tab, select "Accordion" as a Textformatter and save.
 
-2. Add the CSS/JS files to any templates that use this textformatter. You can use any css you want to style the accordion list.
-What is included with this module is a barebones example to get you started.
+2. include the the CSS/JS (requires jQuery) in your HTML. You can use any css you want to style the accordion list — the css included with this module is a barebones example to get you started.
 
 ``` html
-/TextformatterAccordion.css
-/TextformatterAccordion.js
-
+/path/to/jquery.js
+/path/to/TextformatterAccordion.js
+/path/to/tTextformatterAccordion.css
 ```
 
 3. Edit a page that uses the field you added the "Accordion" TextFormatter to in step one.
 The textarea now supports content as usual, but can also have multiple collapsed (Accordion) areas.
 See the examples below for how to desinate accordion items.
 
-## Markup Pattern
+#### To define an accordion item
+Put 5+ hyphens '-----Your Title Here' on a single line (within paragraph tags) to specify a title for the accordion item. The paragraphs below will be collapsed.
+
+#### To end an accordion
+To end a group of accordion items and return to regular textarea content, put exactly 5 slashes on a single line '/////' (within paragraph tags).
+This is only needed if you want to end collapsed content and return to regular textarea content.
+
+#### Markup Example
 
 > ----- Accordion Item
 > 
