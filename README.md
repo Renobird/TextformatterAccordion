@@ -1,6 +1,6 @@
 # Textformatter Accordion 1.1.1
 
-This Textformatter module for ProcessWire allows you to designate areas in a single textarea to be converted to an collapsed accordion list. The markup pattern for this module is based on the **[TextformatterPagination](https://github.com/ryancramerdesign/TextformatterPagination)** plugin with the idea that they could be interchangeable.
+This Textformatter module for ProcessWire allows you to designate areas in a single textarea to be converted to an collapsed accordion list. The markup pattern for this module is based on the **[TextformatterPagination](https://github.com/ryancramerdesign/TextformatterPagination)** module with the idea that they could be interchangeable.
 
 **[Simple Demo (Front end)](http://jsfiddle.net/hEF6z/3/)**
 
