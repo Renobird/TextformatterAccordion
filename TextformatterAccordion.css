@@ -1,0 +1,44 @@
+dl.accordion {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	border-bottom: 1px solid #e0e0e0; 
+}
+dl.accordion > dt {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	border-width: 1px 1px 0 1px;
+	border-style: solid;
+	border-color: #e0e0e0; 
+}
+dl.accordion > dt > a {
+	display: block;
+	padding: 10px 40px 10px 20px;
+	vertical-align: middle;
+	position: relative;
+	transition: all .2s ease; 
+}
+dl.accordion > dt > a:after {
+	content: '+';
+	color: #888;
+	right: 16px;
+	position: absolute; 
+}
+dl.accordion > dt > a:hover {
+	text-decoration: none;
+	background: #f5f5f5; 
+}
+dl.accordion > dt > a.open {
+	background: #efefef; 
+}
+dl.accordion > dt > a.open:before {
+	content: '-'; 
+}
+dl.accordion dd {
+	display: none;
+	padding: 10px;
+	border-width: 0 1px 0 1px;
+	border-style: solid;
+	border-color: #e0e0e0; 
+}

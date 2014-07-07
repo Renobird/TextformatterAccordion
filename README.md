@@ -1,6 +1,6 @@
 # Textformatter Accordion 1.1.1
 
-This Textformatter module for ProcessWire allows you to designate areas in a single textarea to be converted to an collapsed accordion list. The markup pattern for this module is based on the **[TextformatterPagination](https://github.com/ryancramerdesign/TextformatterPagination)** plugin with the idea that they could be interchangeable.
+This Textformatter module for ProcessWire allows you to designate areas in a single textarea to be converted to a collapsed accordion list. The markup pattern for this module is based on the **[TextformatterPagination](https://github.com/ryancramerdesign/TextformatterPagination)** plugin with the idea that they could be interchangeable.
 
 
 ## How to install 
@@ -17,7 +17,7 @@ clicking "check for new modules" from your Modules screen.
 1. In the ProcessWire admin to Setup > Fields and edit the Textarea field that you want to
 support accordions. On the "Details" tab, select "Accordion" as a Textformatter and save.
 
-2. include the the CSS/JS (requires jQuery) in your HTML. You can use any css you want to style the accordion list — the css included with this module is a barebones example to get you started.
+2. Include the the CSS/JS (requires jQuery) in your HTML. You can use any css you want to style the accordion list — the css included with this module is a barebones example to get you started.
 
 ``` html
 /path/to/jquery.js
