@@ -56,7 +56,7 @@ class TextformatterAccordion extends Textformatter {
 			$string = preg_replace('{<p>\s*-----+\s*(.*?)</p>}i', $separator . '$1~~~' . "\t", $val); 
 		
 			$accordion = explode($separator, $string);
-			if(empty($$accordion[0])) array_shift($accordion);
+			if(empty(${$accordion[0]})) array_shift($accordion);
 		
 			foreach($accordion as $k => $v) {
 				$pos = strpos($v, "~~~\t");
